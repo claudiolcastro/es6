@@ -89,5 +89,34 @@ print(10, 11, 12, 13, 14);
 }
 
 // [Modules]
-  import {students, total} from './students';
+  import { students, total } from './students';
+import entity from "./entity";
   console.log(students, total);
+
+// [ Classes ]
+import Entity from "./entity";
+
+  class Hobbit extends Entity{
+    constructor(name, height){
+      super(name, height);
+    }
+  }
+
+  let Frodo = new Hobbit("Frodo", 5.5);
+  Frodo.greet(); 
+
+// [ React ]
+
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+
+  class App extends Component {
+    render(){
+      return (
+        <div>React JS and JSX working!</div>
+      );
+    }
+  }
+
+  ReactDOM.render(<App />, document.getElementById('root'));
+  
